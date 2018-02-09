@@ -10,6 +10,8 @@ public static class ExtensionUtils
             var md5Byte = md.ComputeHash(src.GetBytes());
             return md5Byte.ToHex();
         }
+
+        #region hexstring bytes convert copy from https://stackoverflow.com/questions/623104/byte-to-hex-string/5919521#5919521
         public static string ToHex(this byte[] data)
         {
             return ToHex(data, "");
@@ -60,5 +62,6 @@ public static class ExtensionUtils
             }
             return b;
         }
+        #end region
         
     }
